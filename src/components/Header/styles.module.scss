@@ -1,8 +1,14 @@
 .header { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0; 
+    background: transparent;
+    padding: 20px 2%; 
+    width: 100%;
 
     img {
         width: 120px;

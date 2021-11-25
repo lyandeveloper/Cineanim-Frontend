@@ -54,13 +54,13 @@ h1, h2, h3, h4, h5, h6 {
 button.primary {
   background: var(--main-color);
   border: 1px solid var(--main-color);
-  color: var(--white);
+  color: var(--white); 
 }
 
 button.secondary {
   background: transparent;
   color: var(--white);
-  border: 1px solid var(--white);
+  border: 1px solid var(--white); 
 }
 
 button {
@@ -82,3 +82,7 @@ button {
 .css-1kuq5xv-MuiButtonBase-root-MuiIconButton-root {
   color: var(--white);
 }
+
+.swiper-pagination-bullet-active {
+  background: var(--main-color) !important;
+}  

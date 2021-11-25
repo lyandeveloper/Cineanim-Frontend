@@ -24,7 +24,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.overlay}></div>
         <video className={styles.hero_img} autoPlay muted loop>
-            <source src="/trailer.mp4" type="video/mp4" />
+            <source src="https://cineanim.s3.amazonaws.com/trailer.mp4" type="video/mp4" />
         </video>
 
         <header className={styles.header}>
