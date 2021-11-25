@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from './styles.module.scss';
 import Link from 'next/link';
 
-export default function login() {
+export default function SignUp() {
     return (
     <div>
       <Head>

@@ -1,7 +1,6 @@
-import Head from "next/head";
-import { Grid } from "@material-ui/core";
+import Head from "next/head"; 
 import styles from '../styles/home.module.scss';
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 
 export default function Home() {
 
