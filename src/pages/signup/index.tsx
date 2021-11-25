@@ -21,13 +21,16 @@ export default function login() {
             </Link>
         </header>
         
-        <form className={styles.login}>
-            <h2>Entrar</h2>
-            <input type="text" placeholder="Email ou nome de usuário" />
+        <form className={styles.signup}>
+            <h2>Criar conta</h2>
+            <input type="text" placeholder="Nome" />
+            <input type="text" placeholder="Sobrenome" />
+            <input type="text" placeholder="Email" />
             <input type="password" placeholder="Senha" />
 
-            <button className="primary" type="submit">Entrar</button>
-            <Link href="/signup">Não tenho uma conta</Link>
+            
+            <button className="primary" type="submit">Criar conta</button>
+            <Link href="/login">Já tenho uma conta</Link>
         </form>
       </section>
       </div>

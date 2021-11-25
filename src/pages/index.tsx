@@ -10,6 +10,10 @@ export default function Home() {
   const redirectToLogin = () => {
     router.push('/login');
   }
+
+  const redirectToSignup = () => {
+    router.push('/signup');
+  }
   return (
     <div>
       <Head>
@@ -32,7 +36,7 @@ export default function Home() {
           <h2>Assista seus animes favoritos, sem sair de casa.</h2>
           <p>A melhor plataforma de streaming com diversas variedades de animes só para você!</p>
           <div className={styles.buttons}>
-              <button className="secondary">Criar conta</button>
+              <button onClick={redirectToSignup} className="secondary">Criar conta</button>
               <button onClick={redirectToLogin} className="primary">Entrar</button>
           </div>
         </article>
