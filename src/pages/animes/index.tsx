@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from './styles.module.scss';
 import { Slide } from '../../components/Slide';
+import { AnimeItem } from '../../components/AnimeItem';
 
 export default function Animes() {
     return (
@@ -84,15 +85,12 @@ export default function Animes() {
           <section className={`${styles.animes_container} container`}>
             <h1>Novos Episódios</h1>
             <section className={styles.animes_grid}>
-
-              <a href="#" className={styles.anime}>
-                <img src="https://www.animeunited.com.br/oomtumtu/2021/07/portada_jujutsu-kaisen-71.jpg" alt="" />
-                <div className={styles.anime_text}>
-                  <h2>Jujutsu Kaizen</h2>
-                  <small>Episodio 01 - Há 1min</small>
-                </div>
-              </a>
-
+              <AnimeItem 
+                thumbnail="https://www.animeunited.com.br/oomtumtu/2021/07/portada_jujutsu-kaisen-71.jpg" 
+                title="Jujutsu Kaisen" 
+                episode="01" 
+                createdDate="1min"
+              />
             </section>
           </section>
         </div>
