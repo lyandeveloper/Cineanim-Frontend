@@ -40,6 +40,7 @@
 
 body {
   background: var(--black);
+  overflow-x: hidden;
 }
 
 body, input, textarea, button {
@@ -77,7 +78,7 @@ button {
   margin: 0 auto;
   padding: 0 2%;
 
-}
+} 
 
 .css-1kuq5xv-MuiButtonBase-root-MuiIconButton-root {
   color: var(--white);

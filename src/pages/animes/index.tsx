@@ -80,6 +80,21 @@ export default function Animes() {
                 </SwiperSlide> 
               </Swiper> 
           </section>
+
+          <section className={`${styles.animes_container} container`}>
+            <h1>Novos Episódios</h1>
+            <section className={styles.animes_grid}>
+
+              <a href="#" className={styles.anime}>
+                <img src="https://www.animeunited.com.br/oomtumtu/2021/07/portada_jujutsu-kaisen-71.jpg" alt="" />
+                <div className={styles.anime_text}>
+                  <h2>Jujutsu Kaizen</h2>
+                  <small>Episodio 01 - Há 1min</small>
+                </div>
+              </a>
+
+            </section>
+          </section>
         </div>
     )
 }
