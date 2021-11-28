@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  Cineanim-Frontend
+</h1>
 
-## Getting Started
 
-First, run the development server:
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/lyandeveloper/Cineanim-Frontend">
+  
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/top/lyandeveloper/Cineanim-Frontend">
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  <a href="https://github.com/lyandeveloper/Cineanim-Frontend/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lyandeveloper/Cineanim-Frontend">
+  </a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <a href="https://github.com/lyandeveloper/Cineanim-Frontend/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/lyandeveloper/Cineanim-Frontend">
+  </a>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  
+  <a href="https://github.com/lyandeveloper/">
+    <img alt="Author" src="https://img.shields.io/badge/author-Elian%20Campos-blue">
+  </a>
+</p> 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img src="public/screenshot.png"/>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<p align="center">
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
+  <a href="#how-to-run">How to run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
+</p>
 
-## Learn More
+<br> 
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Project
+Cineanim is a anime streaming platform.<br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technology
+This project was developed with the following technologies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Node.js](https://nodejs.org/en/) 
+- [NextJS](https://nextjs.org/) 
 
-## Deploy on Vercel
+## How to run
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. When cloning type in your terminal:
+
+```sh
+yarn or npm
+``` 
+
+3. Then start the server:
+
+```sh
+yarn dev or npm run dev
+``` 
+
+
+---
+
+Made By ♥ [Elian Campos](https://github.com/lyandeveloper). Add me on [LinkedIn](https://www.linkedin.com/in/elian-campos/) :wave: 
