@@ -2,14 +2,36 @@ import styles from './styles.module.scss';
 import Avatar from '@mui/material/Avatar';
 import { IconButton } from '@mui/material';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import { useEffect, useState } from 'react';
 
 export function Header() {
+    const [color, setColor] = useState<string>();
+    const [scrolling, setScrolling] = useState(false);
+    const [scrollTop, setScrollTop] = useState(0);
+
+    useEffect(() => {
+        const listenScrollEvent = (e) => {
+            setScrollTop(e.target.documentElement.scrollTop);
+            if (scrollTop > 10) {
+              setColor('black');
+            } else {
+                setColor('transparent');
+            }
+        }
+
+        window.addEventListener("scroll", listenScrollEvent);
+
+        return () => window.removeEventListener("scroll", listenScrollEvent);
+    },[scrollTop]);
+
+    
+
     async function search() {
         alert('procurando...')
     }
 
     return( 
-            <header className={styles.header}>
+            <header className={styles.header} style={{ background: color }}>
                 <img src="/logo.png" alt="logo.png"/>
     
                     <form className={styles.search} onSubmit={search} >
