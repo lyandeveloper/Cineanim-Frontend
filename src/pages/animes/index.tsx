@@ -95,9 +95,27 @@ export default function Animes() {
           </section>
 
           <section className={`${styles.episodes_container} container`}>
-            <h1>Animes</h1>
+            <h1>Últimos lançados</h1>
             <section className={styles.episodes_grid}>
-               
+               <a href="#" className={styles.anime}>
+                 <img src="https://animesvision.biz/storage/capa/JjOxiGKqh0fpogTia9Wud1bPNxZ6amvi42PI20Sa.jpg" alt="" />
+                 <div className={styles.anime_content}>
+                    <div className={styles.anime_info}>
+                      <span className={styles.dub}>Legendado</span>
+                      <span className={styles.ep_amount}>26 episódios</span>
+                    </div>
+                    <div className={styles.anime_title}>
+                      <h1>Jujutsu Kaisen</h1>
+                      <div className={styles.anime_status}>
+                        <small>Animes </small>
+                        <span className={styles.dot}></span>
+                        <small>TV</small>
+                        <span className={styles.dot}></span>
+                        <small>Completo</small>
+                      </div>
+                    </div>
+                 </div>
+               </a>
             </section>
           </section>
         </div>
