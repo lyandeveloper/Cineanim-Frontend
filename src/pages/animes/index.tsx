@@ -8,8 +8,46 @@ import styles from './styles.module.scss';
 import { Slide } from '../../components/Slide';
 import { EpisodeCard } from '../../components/EpisodeCard';
 import { AnimeCard } from '../../components/AnimeCard';
+import { useEffect, useState } from 'react';
+import api from '../../services/api';
+
+interface EpisodeTypes {
+  id: number,
+  video: string,
+  thumbnail: string,
+  createdDate: string
+}
+
+interface AnimeTypes {
+  id: number;
+  title: string,
+  slug: string;
+  thumbnail: string; 
+  type: string;
+  dub: string;
+  duration: number;
+  aired: number;
+  age_group: number;
+  episodes_amount: number;
+  status: string;
+  category: string;
+  episodes: EpisodeTypes []; 
+}
 
 export default function Animes() {
+  const [animes, setAnimes] = useState<AnimeTypes[]>();
+
+  useEffect(() => {
+    async function loadLastAnimes() {
+      const response = await api.get('/animes');
+      setAnimes(response.data);
+    } 
+
+    loadLastAnimes();
+  },[])
+
+  if(animes == undefined) return '';
+
     return (
         <div>
           <Head>
@@ -98,15 +136,18 @@ export default function Animes() {
           <section className={`${styles.episodes_container} container`}>
             <h1>Últimos lançados</h1>
             <section className={styles.episodes_grid}>
-               <AnimeCard 
-                link="#" 
-                thumbnail="https://animesvision.biz/storage/capa/JjOxiGKqh0fpogTia9Wud1bPNxZ6amvi42PI20Sa.jpg"
-                dub="Legendado"
-                episodes={26}
-                title="Jujutsu Kaisen" 
-                type="TV"
-                status="Completo"
-              />
+              {animes.map((anime : AnimeTypes) => (
+                <AnimeCard
+                  key={anime.id} 
+                  link={`/animes/${anime.slug}`} 
+                  thumbnail={anime.thumbnail}
+                  dub={anime.dub}
+                  episodes={anime.episodes_amount}
+                  title={anime.title} 
+                  type={anime.type}
+                  status={anime.status}
+                />
+              ))}
             </section>
           </section>
         </div>
