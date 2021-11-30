@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './styles.module.scss';
 import { Slide } from '../../components/Slide';
 import { EpisodeCard } from '../../components/EpisodeCard';
+import { AnimeCard } from '../../components/AnimeCard';
 
 export default function Animes() {
     return (
@@ -97,25 +98,15 @@ export default function Animes() {
           <section className={`${styles.episodes_container} container`}>
             <h1>Últimos lançados</h1>
             <section className={styles.episodes_grid}>
-               <a href="#" className={styles.anime}>
-                 <img src="https://animesvision.biz/storage/capa/JjOxiGKqh0fpogTia9Wud1bPNxZ6amvi42PI20Sa.jpg" alt="" />
-                 <div className={styles.anime_content}>
-                    <div className={styles.anime_info}>
-                      <span className={styles.dub}>Legendado</span>
-                      <span className={styles.ep_amount}>26 episódios</span>
-                    </div>
-                    <div className={styles.anime_title}>
-                      <h1>Jujutsu Kaisen</h1>
-                      <div className={styles.anime_status}>
-                        <small>Animes </small>
-                        <span className={styles.dot}></span>
-                        <small>TV</small>
-                        <span className={styles.dot}></span>
-                        <small>Completo</small>
-                      </div>
-                    </div>
-                 </div>
-               </a>
+               <AnimeCard 
+                link="#" 
+                thumbnail="https://animesvision.biz/storage/capa/JjOxiGKqh0fpogTia9Wud1bPNxZ6amvi42PI20Sa.jpg"
+                dub="Legendado"
+                episodes={26}
+                title="Jujutsu Kaisen" 
+                type="TV"
+                status="Completo"
+              />
             </section>
           </section>
         </div>
