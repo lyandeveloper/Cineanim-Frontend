@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from './styles.module.scss';
 import { Slide } from '../../components/Slide';
-import { AnimeItem } from '../../components/AnimeItem';
+import { EpisodeCard } from '../../components/EpisodeCard';
 
 export default function Animes() {
     return (
@@ -82,15 +82,22 @@ export default function Animes() {
               </Swiper> 
           </section>
 
-          <section className={`${styles.animes_container} container`}>
+          <section className={`${styles.episodes_container} container`}>
             <h1>Novos Episódios</h1>
-            <section className={styles.animes_grid}>
-              <AnimeItem 
+            <section className={styles.episodes_grid}>
+              <EpisodeCard 
                 thumbnail="https://www.animeunited.com.br/oomtumtu/2021/07/portada_jujutsu-kaisen-71.jpg" 
                 title="Jujutsu Kaisen" 
                 episode="01" 
                 createdDate="1min"
               />
+            </section>
+          </section>
+
+          <section className={`${styles.episodes_container} container`}>
+            <h1>Animes</h1>
+            <section className={styles.episodes_grid}>
+               
             </section>
           </section>
         </div>
