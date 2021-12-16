@@ -10,7 +10,7 @@
             "duration": 23,
             "dub": "Legendado",
             "aired": 2020,
-            "age-group": 17,
+            "age_group": 17,
             "episodes_amount": 26,
             "status": "Completo",
             "category": "Ação",

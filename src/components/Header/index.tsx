@@ -3,6 +3,7 @@ import Avatar from '@mui/material/Avatar';
 import { IconButton } from '@mui/material';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export function Header() {
     const [color, setColor] = useState<string>();
@@ -32,7 +33,9 @@ export function Header() {
 
     return( 
             <header className={styles.header} style={{ background: color }}>
-                <img src="/logo.png" alt="logo.png"/>
+                <Link href="/animes">
+                    <img src="/logo.png" alt="logo.png"/> 
+                </Link> 
     
                     <form className={styles.search} onSubmit={search} >
                         <input type="search" placeholder="Procure por um anime" />

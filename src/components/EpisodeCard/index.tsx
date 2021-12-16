@@ -5,11 +5,12 @@ interface EpisodesTypes {
     title: string;
     episode: string;
     createdDate: string;
+    href: string;
 }
 
-export function EpisodeCard({ thumbnail, title, episode, createdDate} : EpisodesTypes) {
+export function EpisodeCard({ thumbnail, title, episode, createdDate, href } : EpisodesTypes) {
     return(
-        <a href="#" className={styles.episode}>
+        <a href={href} className={styles.episode}>
             <img src={thumbnail} alt="" />
             <div className={styles.episode_text}>
                 <h2>{title}</h2>
