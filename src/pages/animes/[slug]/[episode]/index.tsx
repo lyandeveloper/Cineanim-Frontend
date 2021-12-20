@@ -5,32 +5,9 @@ import api from "../../../../services/api";
 import styles from './styles.module.scss';
 import Head from "next/head";
 import { Header } from "../../../../components/Header";
+import { AnimeTypes } from "../../../../protocols/AnimeTypes";
+import { EpisodeTypes } from "../../../../protocols/EpisodeTypes";
 
-interface EpisodeTypes {
-    id: string;
-    title: string;
-    video: string;
-    thumbnail: string;
-    createdDate: string;
-}
-
-interface AnimeTypes {
-    id: number;
-    title: string,
-    slug: string;
-    thumbnail: string; 
-    type: string;
-    description: string;
-    duration: number;
-    aired: number;
-    age_group: number;
-    episodes_amount: number;
-    status: string;
-    quality: string;
-    category: string;
-    dub: string;
-    episodes: EpisodeTypes []; 
-}
 
 export default function Episode() {
     const [anime, setAnime] = useState<AnimeTypes>();

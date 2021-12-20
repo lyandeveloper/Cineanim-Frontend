@@ -1,19 +1,10 @@
 import { SwiperSlide } from 'swiper/react';
+import { SlideTypes } from '../../protocols/SlideTypes';
 
 import styles from './styles.module.scss';
 
-interface slideTypes {
-    video: string;
-    title: string;
-    description: string;
-    type: string;
-    minutes: string;
-    year: string;
-    quality: string;
-    dub: string;
-}
 
-export function Slide({ video, title, description, type, minutes, year, quality, dub } : slideTypes) {
+export function Slide({ video, title, description, type, minutes, year, quality, dub } : SlideTypes) {
     return (
         <>
         <video  className={styles.video} autoPlay loop muted>

@@ -3,34 +3,9 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { EpisodeCard } from '../../../components/EpisodeCard';
 import { Header } from '../../../components/Header';
+import { AnimeTypes } from '../../../protocols/AnimeTypes';
 import api from '../../../services/api';
-import styles from './styles.module.scss';
-
-interface EpisodeTypes {
-    id: number;
-    title: string;
-    video: string;
-    thumbnail: string;
-    createdDate: string;
-}
-
-interface AnimeTypes {
-    id: number;
-    title: string,
-    slug: string;
-    thumbnail: string; 
-    type: string;
-    description: string;
-    duration: number;
-    aired: number;
-    age_group: number;
-    episodes_amount: number;
-    status: string;
-    quality: string;
-    category: string;
-    dub: string;
-    episodes: EpisodeTypes []; 
-}
+import styles from './styles.module.scss'; 
 
 export default function Slug() {
     const [anime, setAnime] = useState<AnimeTypes>();
@@ -93,7 +68,7 @@ export default function Slug() {
 
                 <article className={styles.episodes_content}>
                     {anime.episodes.map((episode, index) => (   
-                        <EpisodeCard episode={`0${index + 1}`} thumbnail={episode.thumbnail} title={episode.title} key={episode.id} href={`/animes/${anime.slug}/${index + 1}`}/>
+                        <EpisodeCard episode={`0${index + 1}`} thumbnail={episode.thumbnail} title={episode.title} key={episode.id} href={`/animes/${anime.slug}/${index + 1}`} createdDate='24'/>
                     ))}
                 </article>
             </section>

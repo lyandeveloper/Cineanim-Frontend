@@ -9,30 +9,8 @@ import { Slide } from '../../components/Slide';
 import { EpisodeCard } from '../../components/EpisodeCard';
 import { AnimeCard } from '../../components/AnimeCard';
 import { useEffect, useState } from 'react';
-import api from '../../services/api';
-
-interface EpisodeTypes {
-  id: number,
-  video: string,
-  thumbnail: string,
-  createdDate: string
-}
-
-interface AnimeTypes {
-  id: number;
-  title: string,
-  slug: string;
-  thumbnail: string; 
-  type: string;
-  dub: string;
-  duration: number;
-  aired: number;
-  age_group: number;
-  episodes_amount: number;
-  status: string;
-  category: string;
-  episodes: EpisodeTypes []; 
-}
+import api from '../../services/api'; 
+import { AnimeTypes } from '../../protocols/AnimeTypes';
 
 export default function Animes() {
   const [animes, setAnimes] = useState<AnimeTypes[]>();

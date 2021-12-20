@@ -1,16 +1,7 @@
+import { AnimeCardTypes } from '../../protocols/AnimeTypes';
 import styles from './styles.module.scss';
 
-interface AnimeTypes {
-    link: string;
-    thumbnail: string;
-    dub: string;
-    episodes: number;
-    title: string;
-    type: string;
-    status: string;
-}
-
-export function AnimeCard({ link, thumbnail, dub, episodes, title, type, status} : AnimeTypes) {
+export function AnimeCard({ link, thumbnail, dub, episodes, title, type, status} : AnimeCardTypes) {
     return (
         <a href={link} className={styles.anime}>
             <img src={thumbnail} alt="" />
