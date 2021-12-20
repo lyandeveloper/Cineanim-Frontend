@@ -93,7 +93,7 @@ export default function Slug() {
 
                 <article className={styles.episodes_content}>
                     {anime.episodes.map((episode, index) => (   
-                        <EpisodeCard episode={`0${index + 1}`} thumbnail={episode.thumbnail} title={episode.title} key={episode.id}/>
+                        <EpisodeCard episode={`0${index + 1}`} thumbnail={episode.thumbnail} title={episode.title} key={episode.id} href={`/animes/${anime.slug}/${index + 1}`}/>
                     ))}
                 </article>
             </section>
