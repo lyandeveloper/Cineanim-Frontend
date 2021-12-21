@@ -24,21 +24,15 @@ export function Header() {
 
         return () => window.removeEventListener("scroll", listenScrollEvent);
     },[scrollTop]);
-
-    
-
-    async function search() {
-        alert('procurando...')
-    }
-
+   
     return( 
             <header className={styles.header} style={{ background: color }}>
                 <Link href="/animes">
                     <img src="/logo.png" alt="logo.png"/> 
                 </Link> 
     
-                    <form className={styles.search} onSubmit={search} >
-                        <input type="search" placeholder="Procure por um anime" />
+                    <form className={styles.search} action="/animes/search" method="GET">
+                        <input name="title" type="search" placeholder="Procure por um anime" />
                     </form>
 
                     <article className={styles.profile}>
