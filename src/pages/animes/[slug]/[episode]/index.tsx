@@ -59,10 +59,12 @@ export default function Episode() {
 
                 <section className={styles.player}>
                         <aside className={styles.sidebar}> 
-                            {anime?.episodes.map(ep => (    
-                                <Link key={ep.id} href={`/animes/${slug}/${ep.id}`}>
-                                    {`Episódio 0${ep.id}`}
-                                </Link>
+                            {anime?.episodes.map(ep => (   
+                                <li key={ep.id} className={router.asPath == `/animes/${slug}/${ep.id}` ? "active" : ""}> 
+                                    <Link href={`/animes/${slug}/${ep.id}`}>
+                                        {`Episódio 0${ep.id}`}
+                                    </Link>
+                                </li>
                             ))}
                         </aside> 
                     <video preload="metadata" controls poster={video?.thumbnail} src={video?.video}></video>
