@@ -1,0 +1,22 @@
+.footer { 
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2%;
+    background: url('/footer.png');
+    background-size: cover;
+    background-position: 100% 30%; 
+    background-color: #cccccc;
+    width: 100%;  
+
+
+    .footer_logo {
+        width: 200px;
+    }
+    
+    .footer_content {   
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 4px;
+    } 
+}

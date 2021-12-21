@@ -7,6 +7,7 @@ import Head from "next/head";
 import { Header } from "../../../../components/Header";
 import { AnimeTypes } from "../../../../protocols/AnimeTypes";
 import { EpisodeTypes } from "../../../../protocols/EpisodeTypes";
+import { Footer } from "../../../../components/Footer";
 
 
 export default function Episode() {
@@ -66,7 +67,8 @@ export default function Episode() {
                         </aside> 
                     <video preload="metadata" controls poster={video?.thumbnail} src={video?.video}></video>
                 </section>
-            </section>    
+            </section>  
+            <Footer/>  
         </div> 
     )
 }

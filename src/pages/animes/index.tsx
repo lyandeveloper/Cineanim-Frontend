@@ -11,6 +11,7 @@ import { EpisodeCard } from '../../components/EpisodeCard';
 import { AnimeCard } from '../../components/AnimeCard';
 import api from '../../services/api'; 
 import { AnimeTypes } from '../../protocols/AnimeTypes';
+import { Footer } from '../../components/Footer';
 
 export default function Animes() {
   const [animes, setAnimes] = useState<AnimeTypes[]>();
@@ -227,6 +228,8 @@ export default function Animes() {
                 ))}
             </section>
           </section>
+          
+          <Footer/>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { EpisodeCard } from '../../../components/EpisodeCard';
+import { Footer } from '../../../components/Footer';
 import { Header } from '../../../components/Header';
 import { AnimeTypes } from '../../../protocols/AnimeTypes';
 import api from '../../../services/api';
@@ -72,6 +73,8 @@ export default function Slug() {
                     ))}
                 </article>
             </section>
+
+            <Footer/>
         </div>
     ) 
 }
